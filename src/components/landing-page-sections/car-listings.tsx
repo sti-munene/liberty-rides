@@ -6,9 +6,6 @@ import { Heading } from "../typography";
 import { TypeCarListing } from "@/types/contentful";
 
 const CarListings = ({ listings }: { listings: TypeCarListing[] }) => {
-  console.log("front listings");
-  console.log(listings);
-
   return (
     <div className="py-24">
       <div className="w-full flex items-center justify-between">
@@ -23,34 +20,6 @@ const CarListings = ({ listings }: { listings: TypeCarListing[] }) => {
           Browse all Cars
         </Link>
       </div>
-
-      {/* <div className="mt-8">
-        <Swiper
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-          breakpoints={{
-            0: {
-              spaceBetween: 10,
-            },
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
-          }}
-        >
-          {listings.map((listing: CarListing) => {
-            return (
-              <SwiperSlide key={listing.sys.id}>
-                <CarListing listing={listing} />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </div> */}
 
       <div className="grid grid-cols-12 gap-4 mt-8">
         {listings.map((listing: TypeCarListing) => {

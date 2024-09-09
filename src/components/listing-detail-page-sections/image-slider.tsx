@@ -7,6 +7,9 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { type Asset } from "contentful";
 
 export const ListingImageSlider = ({ images }: { images: Asset[] }) => {
+  console.log("images");
+  console.log(images);
+
   return (
     <div className="relative mt-4">
       <div className="wiper-nav-wrapper absolute top-[-50px] right-0 mb-4 flex items-center gap-2">
@@ -20,10 +23,6 @@ export const ListingImageSlider = ({ images }: { images: Asset[] }) => {
 
       <Swiper
         modules={[Navigation, Pagination]}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => {
-          console.log(swiper);
-        }}
         slidesPerView={1}
         spaceBetween={20}
         navigation={{

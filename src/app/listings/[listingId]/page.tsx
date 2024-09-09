@@ -8,11 +8,20 @@ import { getCarById } from "@/utils";
 import Image from "next/image";
 import { type Asset } from "contentful";
 
-const ListingDetailPage = async ({
-  params,
-}: {
-  params: { listingId: string };
-}) => {
+interface PageParams {
+  listingId: string;
+}
+
+export async function generateMetadata({ params }: { params: PageParams }) {
+  const carListing = await getCarById(params.listingId);
+
+  return {
+    title: carListing?.fields?.title,
+    description: carListing?.fields?.description,
+  };
+}
+
+const ListingDetailPage = async ({ params }: { params: PageParams }) => {
   const carListing = await getCarById(params.listingId);
 
   return (

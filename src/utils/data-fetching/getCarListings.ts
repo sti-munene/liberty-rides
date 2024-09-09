@@ -12,8 +12,6 @@ export async function getListings(limit: number = 6) {
       limit: limit, // limit the results to the latest 6 entries
     });
 
-    console.log(response.items);
-
     return response.items;
   } catch (error) {
     console.error("Error fetching car listings:", error);
@@ -24,8 +22,6 @@ export async function getListings(limit: number = 6) {
 export async function getCarById(entryId: string) {
   try {
     const response = await contentfulClient.getEntry(entryId);
-    console.log(response);
-    console.log("response");
 
     return response as any;
   } catch (error) {

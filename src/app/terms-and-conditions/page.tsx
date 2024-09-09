@@ -2,7 +2,13 @@ import { Container } from "@/components/container";
 import { CallToAction } from "@/components/cta";
 import { Heading, Text } from "@/components/typography";
 import { formatDate, getPageBySlug, renderRichText } from "@/utils";
-import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions",
+  description: "Read the Terms and Conditions for renting a car with Liberty Rides. Understand our rental policies, requirements, insurance, liability, and more before booking your rental vehicle.",
+};
+
 
 const TermsAndConditionsPage = async () => {
   const pageContent = await getPageBySlug("terms-and-conditions");

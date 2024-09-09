@@ -17,9 +17,6 @@ interface CarListingProps {
 }
 
 export const CarListing = ({ listing }: CarListingProps) => {
-  console.log("Final render");
-  console.log(listing);
-
   return (
     <div className="bg-white col-span-12 md:col-span-6 lg:col-span-4">
       <Link className="group" href={`/listings/${listing.sys.id}`}>

@@ -2,6 +2,13 @@ import { CarListing } from "@/components/car-listing";
 import { Container } from "@/components/container";
 import { Heading } from "@/components/typography";
 import { getListings } from "@/utils/data-fetching/getCarListings";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cars for Hire",
+  description:
+    "Browse our car rentals and find the perfect vehicle for your needs. Easy search and booking.",
+};
 
 const CarListingsPage = async () => {
   const listings = await getListings(12);
