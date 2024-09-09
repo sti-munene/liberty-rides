@@ -1,0 +1,2354 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "id": "carListing",
+        "type": "ContentType",
+        "createdAt": "2024-09-03T17:27:45.304Z",
+        "updatedAt": "2024-09-05T08:41:00.959Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 59,
+        "publishedAt": "2024-09-05T08:41:00.959Z",
+        "firstPublishedAt": "2024-09-03T17:27:46.215Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "publishedCounter": 30,
+        "version": 60,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/tb2cqbdr9w08/environments/master/content_types/carListing"
+      },
+      "displayField": "title",
+      "name": "Car Listing",
+      "description": "A car object",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "featuredImage",
+          "name": "Featured Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ],
+              "message": "Only images are allowed"
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "transmission",
+          "name": "Transmission",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "Automatic",
+                "Manual"
+              ]
+            }
+          ],
+          "defaultValue": {
+            "en-US": "Automatic"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "yearOfManufacture",
+          "name": "Year of Manufacture",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "dateRange": {
+                "after": null,
+                "before": null,
+                "max": "2100-01-01T00:00",
+                "min": "2000-01-01T00:00"
+              }
+            }
+          ],
+          "defaultValue": {
+            "en-US": "2015-01-01"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "fuelType",
+          "name": "Fuel Type",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "Diesel",
+                "Petrol"
+              ]
+            }
+          ],
+          "defaultValue": {
+            "en-US": "Petrol"
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "isElectric",
+          "name": "Is Electric",
+          "type": "Boolean",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": false
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "seatingCapacity",
+          "name": "Seating Capacity",
+          "type": "Integer",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": 4
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "bodyStyle",
+          "name": "Body Style",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "SUV",
+                "Sedan",
+                "Hatchback",
+                "Convertible",
+                "Coup",
+                "Bus",
+                "Limousine"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "chauffeurDriven",
+          "name": "Chauffeur Driven",
+          "type": "Boolean",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "defaultValue": {
+            "en-US": false
+          },
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "images",
+          "name": "Images",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "size": {
+                "min": 0,
+                "max": 6
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkMimetypeGroup": [
+                  "image"
+                ],
+                "message": "Only images allowed"
+              }
+            ],
+            "linkType": "Asset"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "id": "page",
+        "type": "ContentType",
+        "createdAt": "2024-09-05T09:46:45.928Z",
+        "updatedAt": "2024-09-05T10:18:18.658Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2024-09-05T10:18:18.658Z",
+        "firstPublishedAt": "2024-09-05T09:46:47.176Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/tb2cqbdr9w08/environments/master/content_types/page"
+      },
+      "displayField": "title",
+      "name": "Page",
+      "description": "Simple page object",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "pageContent",
+          "name": "Page Content",
+          "type": "RichText",
+          "localized": true,
+          "required": true,
+          "validations": [
+            {
+              "enabledMarks": [
+                "bold",
+                "italic",
+                "underline",
+                "code",
+                "superscript",
+                "subscript",
+                "strikethrough"
+              ],
+              "message": "Only bold, italic, underline, code, superscript, subscript, and strikethrough marks are allowed"
+            },
+            {
+              "enabledNodeTypes": [
+                "heading-2",
+                "heading-3",
+                "heading-4",
+                "heading-5",
+                "heading-6",
+                "ordered-list",
+                "unordered-list",
+                "hr",
+                "blockquote",
+                "embedded-entry-block",
+                "embedded-asset-block",
+                "table",
+                "asset-hyperlink",
+                "embedded-entry-inline",
+                "entry-hyperlink",
+                "hyperlink",
+                "heading-1"
+              ],
+              "message": "Only heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, table, link to asset, inline entry, link to entry, link to Url, and heading 1 nodes are allowed"
+            },
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "tb2cqbdr9w08",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 60,
+        "createdAt": "2024-09-03T17:27:46.381Z",
+        "createdBy": {
+          "sys": {
+            "id": "1jpWIyL0jWYCkt59Ggkli5",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-09-05T08:41:02.763Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1jpWIyL0jWYCkt59Ggkli5",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "carListing",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "settings": {
+            "helpText": "Car Title"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "featuredImage",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "transmission",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "yearOfManufacture",
+          "settings": {
+            "ampm": "24",
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "fuelType",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "isElectric",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "seatingCapacity",
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "bodyStyle",
+          "widgetId": "dropdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "chauffeurDriven",
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "images",
+          "widgetId": "assetLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "tb2cqbdr9w08",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 10,
+        "createdAt": "2024-09-05T09:46:47.339Z",
+        "createdBy": {
+          "sys": {
+            "id": "1jpWIyL0jWYCkt59Ggkli5",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2024-09-05T10:18:20.669Z",
+        "updatedBy": {
+          "sys": {
+            "id": "1jpWIyL0jWYCkt59Ggkli5",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "page",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "pageContent",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "id": "01Eiort8acfp33EkKFO5J",
+        "type": "Entry",
+        "createdAt": "2024-09-04T10:33:29.295Z",
+        "updatedAt": "2024-09-05T08:47:12.405Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 27,
+        "publishedAt": "2024-09-05T08:47:12.405Z",
+        "firstPublishedAt": "2024-09-04T10:35:11.811Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "publishedCounter": 10,
+        "version": 28,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "carListing"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/tb2cqbdr9w08/environments/master/entries/01Eiort8acfp33EkKFO5J"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Audi A3"
+        },
+        "featuredImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "35D7YXfLhZ7eLpqZa2TT0c"
+            }
+          }
+        },
+        "transmission": {
+          "en-US": "Automatic"
+        },
+        "yearOfManufacture": {
+          "en-US": "2019-01-01"
+        },
+        "fuelType": {
+          "en-US": "Diesel"
+        },
+        "isElectric": {
+          "en-US": false
+        },
+        "seatingCapacity": {
+          "en-US": 4
+        },
+        "bodyStyle": {
+          "en-US": "Hatchback"
+        },
+        "chauffeurDriven": {
+          "en-US": false
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "25HODYkz8PBHlmcNVFxkRQ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "62LH7dhIykYSABJ4YEbE3Y"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "id": "3XXAtgroeHd37xSkoZdpIe",
+        "type": "Entry",
+        "createdAt": "2024-09-04T18:20:42.534Z",
+        "updatedAt": "2024-09-05T07:16:44.469Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 12,
+        "publishedAt": "2024-09-05T07:16:44.469Z",
+        "firstPublishedAt": "2024-09-04T19:09:21.361Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "carListing"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/tb2cqbdr9w08/environments/master/entries/3XXAtgroeHd37xSkoZdpIe"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Toyota Prado"
+        },
+        "featuredImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3Qk0xGNm7ufXwxqYxwyVLP"
+            }
+          }
+        },
+        "transmission": {
+          "en-US": "Automatic"
+        },
+        "yearOfManufacture": {
+          "en-US": "2015-01-01"
+        },
+        "fuelType": {
+          "en-US": "Petrol"
+        },
+        "isElectric": {
+          "en-US": false
+        },
+        "seatingCapacity": {
+          "en-US": 8
+        },
+        "bodyStyle": {
+          "en-US": "SUV"
+        },
+        "chauffeurDriven": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "id": "6yldDRJ0WhOJ3rZCivovoR",
+        "type": "Entry",
+        "createdAt": "2024-09-05T07:10:25.449Z",
+        "updatedAt": "2024-09-05T14:19:42.461Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 21,
+        "publishedAt": "2024-09-05T14:19:42.461Z",
+        "firstPublishedAt": "2024-09-05T07:14:24.704Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "publishedCounter": 8,
+        "version": 22,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "carListing"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/tb2cqbdr9w08/environments/master/entries/6yldDRJ0WhOJ3rZCivovoR"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Hummer Limousine"
+        },
+        "featuredImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4yjICh0Q8aZw1dOUO66qdt"
+            }
+          }
+        },
+        "transmission": {
+          "en-US": "Automatic"
+        },
+        "yearOfManufacture": {
+          "en-US": "2015-01-01"
+        },
+        "fuelType": {
+          "en-US": "Petrol"
+        },
+        "isElectric": {
+          "en-US": false
+        },
+        "seatingCapacity": {
+          "en-US": 12
+        },
+        "bodyStyle": {
+          "en-US": "Limousine"
+        },
+        "chauffeurDriven": {
+          "en-US": true
+        },
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4yjICh0Q8aZw1dOUO66qdt"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6OIbhZzeUGeOs3nDvQoVlu"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "64TlKHcxknrnoz6vdLlRlv"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "Jb3ftUMIcGZzOhVCrpD7R"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ],
+        "concepts": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "id": "5hwFUBGapvY9JdmgfiJ7A8",
+        "type": "Entry",
+        "createdAt": "2024-09-05T09:47:22.397Z",
+        "updatedAt": "2024-09-05T11:33:25.172Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 76,
+        "publishedAt": "2024-09-05T11:33:25.172Z",
+        "firstPublishedAt": "2024-09-05T09:50:01.536Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "publishedCounter": 11,
+        "version": 77,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "automationTags": [
+        ],
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/tb2cqbdr9w08/environments/master/entries/5hwFUBGapvY9JdmgfiJ7A8"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Terms & Conditions"
+        },
+        "slug": {
+          "en-US": "terms-and-conditions"
+        },
+        "pageContent": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Welcome to Liberty Rides. By making a reservation with us, you agree to the following terms and conditions:",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-6",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "1. Vehicle Delivery",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "All vehicles will be delivered directly to your specified office or home location. Pickup from our office is not available.\nDelivery must be arranged during business hours, and you are responsible for providing accurate delivery details at the time of booking.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-6",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "2. Rental Duration",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "The rental period begins when the vehicle is delivered to your location.\nLate returns may incur additional charges. Please notify us in advance if you need to extend your rental.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-6",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "3. Payment Terms",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Full payment is required before the vehicle is delivered.\nAny additional charges, such as damage fees or late return penalties, will be billed separately.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-6",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "4. Driver Requirements",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Drivers must hold a valid driver's license and meet the minimum age requirements as specified during booking.\nThe vehicle may only be driven by individuals listed in the rental agreement.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-6",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "5. Fuel Policy",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "The vehicle will be delivered with a full tank of fuel. Please return the vehicle with the same fuel level to avoid refueling charges.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-6",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "6. Insurance",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "\nBasic insurance is included with your rental. However, you may be liable for damage or theft up to a certain limit. Additional coverage options are available upon request.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-6",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "7. Cancellations",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Cancellations made at least 24 hours before the scheduled delivery are eligible for a full refund. Cancellations within 24 hours may incur a fee.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-6",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "8. Responsibility for Damages",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "You are responsible for any damage to the vehicle during the rental period, excluding normal wear and tear. All damages must be reported immediately.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "heading-6",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "9. Personal Belongings",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "We are not responsible for any personal belongings left in the vehicle. Please ensure all items are removed upon return.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              },
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "By confirming your reservation, you acknowledge that you have read and agreed to these terms and conditions. If you have any questions or concerns, please contact us at hello@libertyrides.com",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "id": "35D7YXfLhZ7eLpqZa2TT0c",
+        "type": "Asset",
+        "createdAt": "2024-09-04T10:33:48.547Z",
+        "updatedAt": "2024-09-05T06:47:23.463Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 12,
+        "publishedAt": "2024-09-05T06:47:23.463Z",
+        "firstPublishedAt": "2024-09-04T10:34:57.326Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 13,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/tb2cqbdr9w08/environments/master/assets/35D7YXfLhZ7eLpqZa2TT0c"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Audi A3 2019"
+        },
+        "description": {
+          "en-US": "The Audi A3 2019 is a 4 or 5 seat Convertible, Hatch or Sedan with a 5-star ANCAP safety rating."
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/tb2cqbdr9w08/35D7YXfLhZ7eLpqZa2TT0c/06bf5ce618e384febbad6b884a4d251c/1366_2000.jpg",
+            "details": {
+              "size": 140747,
+              "image": {
+                "width": 1366,
+                "height": 980
+              }
+            },
+            "fileName": "1366_2000.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "id": "3Qk0xGNm7ufXwxqYxwyVLP",
+        "type": "Asset",
+        "createdAt": "2024-09-04T19:08:10.318Z",
+        "updatedAt": "2024-09-04T19:09:04.677Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2024-09-04T19:09:04.677Z",
+        "firstPublishedAt": "2024-09-04T19:09:04.677Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/tb2cqbdr9w08/environments/master/assets/3Qk0xGNm7ufXwxqYxwyVLP"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Toyota Prado 250 Series"
+        },
+        "description": {
+          "en-US": "Prado"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/tb2cqbdr9w08/3Qk0xGNm7ufXwxqYxwyVLP/371675751f4c89d1b2a6209388a3ef3c/001_LandCruiser250_s.jpg",
+            "details": {
+              "size": 1108927,
+              "image": {
+                "width": 1920,
+                "height": 1080
+              }
+            },
+            "fileName": "001_LandCruiser250_s.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "id": "4yjICh0Q8aZw1dOUO66qdt",
+        "type": "Asset",
+        "createdAt": "2024-09-05T07:13:22.424Z",
+        "updatedAt": "2024-09-05T07:13:53.829Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2024-09-05T07:13:53.829Z",
+        "firstPublishedAt": "2024-09-05T07:13:53.829Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/tb2cqbdr9w08/environments/master/assets/4yjICh0Q8aZw1dOUO66qdt"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Hummer Limousine"
+        },
+        "description": {
+          "en-US": "Hummer Limousine"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/tb2cqbdr9w08/4yjICh0Q8aZw1dOUO66qdt/098991db69598130395ac1af0274cc08/LL-Hummer-Limousine-Gallery-6.jpg",
+            "details": {
+              "size": 286043,
+              "image": {
+                "width": 750,
+                "height": 500
+              }
+            },
+            "fileName": "LL-Hummer-Limousine-Gallery-6.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "id": "25HODYkz8PBHlmcNVFxkRQ",
+        "type": "Asset",
+        "createdAt": "2024-09-05T08:43:00.945Z",
+        "updatedAt": "2024-09-05T08:46:17.039Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2024-09-05T08:46:17.039Z",
+        "firstPublishedAt": "2024-09-05T08:44:21.269Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/tb2cqbdr9w08/environments/master/assets/25HODYkz8PBHlmcNVFxkRQ"
+      },
+      "fields": {
+        "title": {
+          "en-US": "2021 Audi A3 Sportback (Front Side View)"
+        },
+        "description": {
+          "en-US": "2021 Audi A3 Sportback (Front Side View)"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/tb2cqbdr9w08/25HODYkz8PBHlmcNVFxkRQ/098ddfc83efd3b8657417e2df69c0ae6/2021_audi_a3_sportback_65_1600x1200.jpg",
+            "details": {
+              "size": 339869,
+              "image": {
+                "width": 1544,
+                "height": 1158
+              }
+            },
+            "fileName": "2021_audi_a3_sportback_65_1600x1200.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "id": "62LH7dhIykYSABJ4YEbE3Y",
+        "type": "Asset",
+        "createdAt": "2024-09-05T08:44:32.545Z",
+        "updatedAt": "2024-09-05T08:46:41.347Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2024-09-05T08:46:41.347Z",
+        "firstPublishedAt": "2024-09-05T08:45:17.150Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/tb2cqbdr9w08/environments/master/assets/62LH7dhIykYSABJ4YEbE3Y"
+      },
+      "fields": {
+        "title": {
+          "en-US": "2021 Audi A3 Sportback (Back View)"
+        },
+        "description": {
+          "en-US": "2021 Audi A3 Sportback (Back View)"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/tb2cqbdr9w08/62LH7dhIykYSABJ4YEbE3Y/db26372c6f21cb57124e6da1d125847a/2021_audi_a3_sportback_60_1600x1200.jpg",
+            "details": {
+              "size": 411075,
+              "image": {
+                "width": 1553,
+                "height": 1164
+              }
+            },
+            "fileName": "2021_audi_a3_sportback_60_1600x1200.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "id": "Jb3ftUMIcGZzOhVCrpD7R",
+        "type": "Asset",
+        "createdAt": "2024-09-05T13:59:47.497Z",
+        "updatedAt": "2024-09-05T14:06:18.751Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2024-09-05T14:06:18.751Z",
+        "firstPublishedAt": "2024-09-05T14:00:20.245Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/tb2cqbdr9w08/environments/master/assets/Jb3ftUMIcGZzOhVCrpD7R"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Hummer (Inside View)"
+        },
+        "description": {
+          "en-US": "Hummer (Inside View)"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/tb2cqbdr9w08/Jb3ftUMIcGZzOhVCrpD7R/66b4314050bfaf15e1aaa4d3345061f4/HUMMER-LIMO-3.jpg",
+            "details": {
+              "size": 110488,
+              "image": {
+                "width": 1000,
+                "height": 666
+              }
+            },
+            "fileName": "HUMMER-LIMO-3.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "id": "6OIbhZzeUGeOs3nDvQoVlu",
+        "type": "Asset",
+        "createdAt": "2024-09-05T14:03:06.710Z",
+        "updatedAt": "2024-09-05T14:06:58.661Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2024-09-05T14:06:58.661Z",
+        "firstPublishedAt": "2024-09-05T14:03:47.638Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/tb2cqbdr9w08/environments/master/assets/6OIbhZzeUGeOs3nDvQoVlu"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Pink Hummer (Side View)"
+        },
+        "description": {
+          "en-US": "Pink Hummer (Side View)"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/tb2cqbdr9w08/6OIbhZzeUGeOs3nDvQoVlu/fb00f0b8799c16d4062206d9735b54a9/pink-hummer-limo-in-miami.jpg",
+            "details": {
+              "size": 175450,
+              "image": {
+                "width": 960,
+                "height": 640
+              }
+            },
+            "fileName": "pink-hummer-limo-in-miami.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "id": "64TlKHcxknrnoz6vdLlRlv",
+        "type": "Asset",
+        "createdAt": "2024-09-05T14:03:55.561Z",
+        "updatedAt": "2024-09-05T14:07:17.047Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2024-09-05T14:07:17.047Z",
+        "firstPublishedAt": "2024-09-05T14:04:24.457Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "fieldStatus": {
+          "*": {
+            "en-US": "published"
+          }
+        },
+        "urn": "crn:contentful:::content:spaces/tb2cqbdr9w08/environments/master/assets/64TlKHcxknrnoz6vdLlRlv"
+      },
+      "fields": {
+        "title": {
+          "en-US": "Pink Hummer (Front View)"
+        },
+        "description": {
+          "en-US": "Pink Hummer (Front View)"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/tb2cqbdr9w08/64TlKHcxknrnoz6vdLlRlv/da1b6e84318de56e0c5e472975b2345f/Pink-Panther-Hummer-Limo-3.jpg",
+            "details": {
+              "size": 169461,
+              "image": {
+                "width": 1000,
+                "height": 750
+              }
+            },
+            "fileName": "Pink-Panther-Hummer-Limo-3.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "1HRgUK8vArLELyPg3jv7Dl",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "b565b435-dc65-4cf0-9d47-025c82545052"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "createdAt": "2024-09-03T14:53:35Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedAt": "2024-09-03T14:53:35Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+    {
+      "name": "Author",
+      "description": "Allows editing of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "1IgLQxZ2WIpj33836FaohZ",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "createdAt": "2024-09-03T14:53:35Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedAt": "2024-09-03T14:53:35Z"
+      }
+    },
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "1Ihpkc4FQ3rECmU8790Gvx",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "createdAt": "2024-09-03T14:53:35Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedAt": "2024-09-03T14:53:35Z"
+      }
+    },
+    {
+      "name": "Translator",
+      "description": "Allows editing of localized fields in the specified language",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "1IhOZMN3cOLP6nXeF7M5gT",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "tb2cqbdr9w08"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "createdAt": "2024-09-03T14:53:35Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "1jpWIyL0jWYCkt59Ggkli5"
+          }
+        },
+        "updatedAt": "2024-09-03T14:53:35Z"
+      }
+    }
+  ]
+}
