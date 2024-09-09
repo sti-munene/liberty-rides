@@ -49,7 +49,7 @@ export const ListingImageSlider = ({ images }: { images: Asset[] }) => {
                 alt={img?.fields?.title || ("Image" as any)}
                 className="h-[320px] lg:h-[420px] w-full object-cover object-center rounded-lg"
                 priority
-                src={`https://${img?.fields?.file?.url as any}`}
+                src={`https:${img?.fields?.file?.url as any}`}
               />
             </SwiperSlide>
           );
