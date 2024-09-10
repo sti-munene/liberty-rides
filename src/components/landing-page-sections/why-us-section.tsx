@@ -42,12 +42,10 @@ export const WhyUsSection = () => {
               className="bg-white bg-opacity-5 text-white p-4 rounded-md col-span-12 md:col-span-6"
             >
               <Heading font="display" size="heading6">
-                Affordable Rates
+                {reason.title}
               </Heading>
 
-              <Text className="mt-2">
-                We provide competitive pricing with no hidden fees.
-              </Text>
+              <Text className="mt-2">{reason.description}</Text>
             </div>
           );
         })}
