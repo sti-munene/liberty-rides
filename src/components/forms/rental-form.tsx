@@ -81,7 +81,7 @@ export function CarRentalForm() {
           name="carUrl"
         />
 
-        <div className="grid grid-cols-2 items-start gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-2">
           <div>
             <FormField
               control={control}
@@ -119,7 +119,7 @@ export function CarRentalForm() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 items-start gap-2 mt-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-2 mt-2">
           <FormField
             control={control}
             name="fromDate"
